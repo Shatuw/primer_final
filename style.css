@@ -1,0 +1,238 @@
+/* ------------------------Allgemeine Deklarationen-------------------------- */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right, #f4cf97, #ffffff);
+    font-family:'Times New Roman', Times, serif;
+    color: black;
+    
+    /* font-size: large; */
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    background-color: #fff;
+}
+/* ---------------------------------------------------------------
+----------------CSS for smaller screen-width----------------------
+------------------------------------------------------------------ */
+@media only screen and (max-width: 600px)
+{
+    header{
+        border-bottom: 1px solid grey;
+    }
+    img#big-screen-banner{
+        display: none;
+    }
+    img#small-screen-banner{
+        float:left;
+        height: 1.5em;
+        padding: 5px;
+        border-radius: 50%;
+    }
+    header nav{
+        padding-top:10px;
+        display:flex;
+        justify-content: center;
+        
+        font-size: 1.5em;    
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    
+    nav a{
+        padding: 5px;
+        text-decoration: none;
+        color: black;
+    }
+    nav a:hover{
+        cursor:pointer;
+        background-color:#ffffff;
+    }
+    nav a:active{
+        background-color: #f4cf97;       
+    }
+    
+
+    main>* {
+        margin:0.7em;
+        text-align: center;
+    }
+    /* Artikelsektion scrollbar machen */
+    .blogsection{
+        max-height: 600px;
+        width: 98%;
+        /* border: 2px inset #f4cf97; */
+        margin: auto;
+        overflow-y: auto;
+        overflow-x:hidden;
+    
+        }
+        /* div-klasse um <articel> und <aside> nebeneinander zu positionieren */
+        .artikel{
+            display:flex;
+            /* justify-content: space-between; */
+            /* border: 1px solid YELLOW; */
+            flex-wrap: wrap;
+            border-top: 2px solid grey;
+            margin-top: 3em;
+            justify-content: center;
+            }
+        article{
+            /* width: 80%; */
+            /* border: 1px solid red; */
+            text-align: justify;
+        }
+        article * {
+            /* padding: 5px; */
+            margin: 0.5em;
+            /* list-style: none; */
+        }
+        article img{
+            float: left;
+            margin: 1em;
+            height: 4em;
+            border-radius:50px;
+        }
+    
+        aside{
+            /* width: 20%; */
+            /* border: 1px solid aqua; */
+            border: 1px dotted grey;
+            /* padding: 1em;    */
+            /* text-align: center; */
+        }
+        aside *{
+            margin: 1em;
+        }
+        aside img{
+            width: 100%;
+            margin:0%;
+            /* padding:0%; */
+        }
+        
+
+}
+/* -------------------------------------------------------------
+------------------CSS for bigger screen-width-------------------
+---------------------------------------------------------------- */
+@media only screen and (min-width: 601px)
+{
+
+    /* --------------------------Navigation / Webseitenbanner /Header------------------------- */
+    /* ------Banner-Bild--------- */
+
+    img#big-screen-banner{
+        height: 150px;
+        width: 100%;
+        /* display: none; */
+    }
+    img#small-screen-banner{
+        display:none;
+    }
+    /* ------------Navigation------------ */
+    header nav{
+        padding-top:10px;
+        display:flex;
+        justify-content: center;
+        border-bottom: 1px solid grey;
+        font-size: 1.5em;    
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    /* header nav ul{
+        display: flex;
+        justify-content: center;    
+        flex-direction: row;
+        
+        list-style-type: none;
+        font-size: 1.5em;
+        width: 400px;
+        padding:0.4em;
+        border: 1px solid blue;
+    } */
+    /* header li{
+        
+        border: 1px solid red;
+        padding: 0.5em;
+    } */
+    nav a{
+        padding: 5px;
+        
+        text-decoration: none;
+        color: black;
+        
+    }
+    nav a:hover{
+        cursor:pointer;
+        background-color:#ffffff;
+        /* text-decoration: underline; */
+        /* border-top: 1px solid grey; */
+    }
+    nav a:active{
+        background-color: #f4cf97;
+        
+    }
+
+    /* --------------------Hier beginnt der Hauptteil/Inhaltsteil---------------------------------- */
+
+    main>* {
+        margin:0.7em;
+        text-align: center;
+    }
+    /* Artikelsektion scrollbar machen */
+    .blogsection{
+    max-height: 600px;
+    width: 80%;
+    /* border: 2px inset #f4cf97; */
+    margin: auto;
+    overflow-y: auto;
+    overflow-x:hidden;
+
+    }
+    /* div-klasse um <articel> und <aside> nebeneinander zu positionieren */
+    .artikel{
+        display:flex;
+        /* justify-content: space-between; */
+        /* border: 1px solid YELLOW; */
+        flex-wrap: wrap;
+        border-top: 1px dotted grey;
+        margin-top: 3em;
+        
+        }
+    article{
+        width: 80%;
+        /* border: 1px solid red; */
+        text-align: justify;
+    }
+    article * {
+        /* padding: 5px; */
+        margin: 0.5em;
+        /* list-style: none; */
+    }
+    article img{
+        float: left;
+        margin: 1em;
+        border-radius:50px;
+    }
+
+    aside{
+        width: 20%;
+        /* border: 1px solid aqua; */
+        border-left: 1px dotted grey;
+        /* padding: 1em;    */
+        /* text-align: justify; */
+        
+    }
+    aside *{
+        margin: 1em;
+    }
+    aside img{
+        width: 100%;
+        margin:0%;
+        /* padding:0%; */
+    }
+}
